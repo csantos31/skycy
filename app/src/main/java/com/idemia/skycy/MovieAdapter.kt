@@ -1,6 +1,7 @@
 package com.idemia.skycy
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,17 @@ class MovieAdapter : BaseAdapter {
         var movieView : View = inflate.inflate(R.layout.card_mv, null)
         movieView.imageView.setImageResource(movie.image!!)
         movieView.textView.text = movie.name!!
+
+        movieView.imageView.setOnClickListener{
+            var intent = Intent(context, DetailsActivity::class.java)
+
+            intent.putExtra("name", movie.name!!)
+            intent.putExtra("description", movie.description!!)
+            intent.putExtra("image", movie.image!!)
+
+            context!!.startActivity(intent)
+        }
+
         return movieView
     }
 
