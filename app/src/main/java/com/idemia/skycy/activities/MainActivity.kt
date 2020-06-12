@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                     movieList.add(Movie(
                         item.title,
                         item.overview,
-                        R.drawable.img3
+                        item.cover_url
                     ))
                 }
 

@@ -9,6 +9,7 @@ import android.widget.BaseAdapter
 import com.idemia.skycy.R
 import com.idemia.skycy.activities.DetailsActivity
 import com.idemia.skycy.models.Movie
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.card_mv.view.*
 
 class MovieAdapter : BaseAdapter {
@@ -21,15 +22,17 @@ class MovieAdapter : BaseAdapter {
         this.context = context
     }
 
-
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         var movie: Movie = this.movieList[position]
-        var inflate : LayoutInflater = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        var movieView : View = inflate.inflate(R.layout.card_mv, null)
-        movieView.imageView.setImageResource(movie.image!!)
-        movieView.textView.text = movie.name!!
+        var inflate: LayoutInflater =
+            context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        var movieView: View = inflate.inflate(R.layout.card_mv, null)
 
-        movieView.imageView.setOnClickListener{
+        Picasso.get().load(movie.image).placeholder(R.drawable.transparent_bg)
+            .error(R.drawable.sherlock).into(movieView.imageView)
+
+        movieView.textView.text = movie.name!!
+        movieView.imageView.setOnClickListener {
             var intent = Intent(context, DetailsActivity::class.java)
 
             intent.putExtra("name", movie.name!!)
