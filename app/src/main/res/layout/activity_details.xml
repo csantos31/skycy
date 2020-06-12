@@ -63,7 +63,7 @@
                     android:id="@+id/descriptionDetail"
                     android:text="DC serie about a girl who was sent from her planet Cripto to Earth"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp"/>
+                    android:textSize="18sp"/>
                 <Button
                     android:layout_marginTop="20dp"
                     android:layout_width="300dp"

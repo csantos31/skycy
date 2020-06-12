@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
             var skyResponse: List<SKYResponse>? = SKYApi.getInstance().getMovies()
 
-            Log.e("log", ""+ skyResponse!![0].backdrops_url[0])
+            Log.e("log", ""+ skyResponse!![0].backdrops_url?.get(0))
 
             handler.post(Runnable {
                 for(item: SKYResponse in skyResponse){
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                         item.title,
                         item.overview,
                         item.cover_url,
-                        item.backdrops_url[0],
+                        item.backdrops_url?.get(0),
                         item.duration,
                         item.release_year
                     ))
