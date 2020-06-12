@@ -11,13 +11,15 @@ class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
+        supportActionBar!!.hide()
 
         var extras = intent.extras
 
-        Picasso.get().load(extras!!.getString("image")).placeholder(R.drawable.transparent_bg)
+        Picasso.get().load(extras!!.getString("background")).placeholder(R.drawable.sherlockbg)
             .error(R.drawable.sherlockbg).into(imageDetail)
-
         nameDetail.text = extras!!.getString("name")
         descriptionDetail.text = extras!!.getString("description")
+        releaseYear.text = extras!!.getString("released")
+        duration.text = extras!!.getString("duration")
     }
 }

@@ -28,7 +28,7 @@ class MovieAdapter : BaseAdapter {
             context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         var movieView: View = inflate.inflate(R.layout.card_mv, null)
 
-        Picasso.get().load(movie.image).placeholder(R.drawable.transparent_bg)
+        Picasso.get().load(movie.image).placeholder(R.drawable.sherlock)
             .error(R.drawable.sherlock).into(movieView.imageView)
 
         movieView.textView.text = movie.name!!
@@ -37,7 +37,10 @@ class MovieAdapter : BaseAdapter {
 
             intent.putExtra("name", movie.name!!)
             intent.putExtra("description", movie.description!!)
+            intent.putExtra("released", movie.releaseYear!!)
+            intent.putExtra("duration", movie.duration!!)
             intent.putExtra("image", movie.image!!)
+            intent.putExtra("background", movie.background!!)
 
             context!!.startActivity(intent)
         }

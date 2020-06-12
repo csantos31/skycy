@@ -4,30 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Details"
+    tools:context=".activities.DetailsActivity"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="@color/colorPrimary">
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageDetail"
-        android:src="@drawable/img1"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/nameDetail"
-        android:text="SUPERGIRL"
-        android:textColor="#E10A0A"
-        android:textSize="20sp"
-        android:padding="4dp"/>
-    <TextView
-        android:padding="4dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/descriptionDetail"
-        android:text="DC serie about a girl who was sent from her planet Cripto to Earth"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:id="@+id/imageDetail"
+                    android:src="@drawable/img1"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nameDetail"
+                        android:text="SUPERGIRL"
+                        android:textColor="#E10A0A"
+                        android:textSize="18sp"
+                        android:padding="4dp"/>
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/duration"
+                        android:text="2h 40m"
+                        android:textColor="#E10A0A"
+                        android:textSize="18sp"
+                        android:padding="4dp"
+                        android:textAlignment="viewEnd"
+                        android:gravity="end" />
+                </LinearLayout>
+                <TextView
+                    android:padding="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/releaseYear"
+                    android:text="2017"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:padding="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/descriptionDetail"
+                    android:text="DC serie about a girl who was sent from her planet Cripto to Earth"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+                <Button
+                    android:layout_marginTop="20dp"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/transparent_bg"
+                    android:text="ASSISTIR"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </LinearLayout>

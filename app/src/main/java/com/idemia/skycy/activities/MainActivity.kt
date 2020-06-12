@@ -38,7 +38,10 @@ class MainActivity : AppCompatActivity() {
                     movieList.add(Movie(
                         item.title,
                         item.overview,
-                        item.cover_url
+                        item.cover_url,
+                        item.backdrops_url[0],
+                        item.duration,
+                        item.release_year
                     ))
                 }
 
