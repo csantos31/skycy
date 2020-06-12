@@ -1,4 +1,4 @@
-package com.idemia.skycy
+package com.idemia.skycy.adapters
 
 import android.content.Context
 import android.content.Intent
@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import com.idemia.skycy.R
+import com.idemia.skycy.activities.DetailsActivity
+import com.idemia.skycy.models.Movie
 import kotlinx.android.synthetic.main.card_mv.view.*
 
 class MovieAdapter : BaseAdapter {

@@ -1,7 +1,8 @@
-package com.idemia.skycy
+package com.idemia.skycy.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.idemia.skycy.R
 import kotlinx.android.synthetic.main.activity_details.*
 
 class DetailsActivity : AppCompatActivity() {

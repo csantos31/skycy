@@ -1,4 +1,4 @@
-package com.idemia.skycy
+package com.idemia.skycy.models
 
 class Movie {
     var name : String? = null
